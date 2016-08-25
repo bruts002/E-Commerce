@@ -1,6 +1,5 @@
 <?php
 
-//mysqli_connect args(servername, username for database, password, database name)
 $sql_server = "localhost";
 $sql_user = "root";
 $sql_pass = "";

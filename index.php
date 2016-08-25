@@ -81,11 +81,7 @@ include("functions/functions.php");
 			</div>
 			<!--End content_wrapper container-->
 			
-			<div id="footer">
-			
-			<h2 style="text-align:center; padding-top:30px;">&copy; 2016 by Michael Brutskiy</h2>
-			
-			</div>
+			<?php include("footer.html") ?>
 		
 	
 	
