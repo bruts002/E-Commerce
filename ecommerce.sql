@@ -37,8 +37,8 @@ CREATE TABLE IF NOT EXISTS `admins` (
 --
 
 INSERT INTO `admins` (`user_id`, `user_email`, `user_pas`) VALUES
-(1, 'mikebrutskiy@gmail.com', 'ggateway'),
-(2, 'ksushakarpitski@gmail.com', 'ggateway');
+(1, 'admin@gmail.com', 'password'),
+(2, 'admin2@gmail.com', 'pass2');
 
 -- --------------------------------------------------------
 
@@ -76,16 +76,6 @@ CREATE TABLE IF NOT EXISTS `cart` (
   `ip_add` varchar(255) NOT NULL,
   `qty` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`p_id`, `ip_add`, `qty`) VALUES
-(3, '::1', 1),
-(4, '::1', 1),
-(7, '::1', 1),
-(8, '::1', 1);
 
 -- --------------------------------------------------------
 
