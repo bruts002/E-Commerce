@@ -58,7 +58,7 @@ include("functions/functions.php");
 				
 			</div>
 				
-			<?php include("footer.html"); ?>
+			<?php include("templates/footer.html"); ?>
 	
 	</div>
 	<!--End main_wrapper container-->

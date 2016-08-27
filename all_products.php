@@ -46,62 +46,40 @@ include("functions/functions.php");
 			
 			<!--Begin content_wrapper container-->
 			<div class="content_wrapper">
-				<div id="sidebar" >
 				
-					<div id="sidebar_title">Categories</div>
-					
-					<ul id="cats">
-						<?php getCats(); ?>
-					</ul>
-					
-					<div id="sidebar_title">Brands</div>
-					
-					<ul id="cats">
-						<?php getBrands(); ?>
-					</ul>
-					
-				</div>
+				<?php include("templates/sidebar.php"); ?>
 			
 				<div id="content_area">
 					<?php cart(); ?>
 					
 					<div id="shopping_cart">
-						<?php include("status_bar.php") ?>
+						<?php include("templates/status_bar.php") ?>
 					</div>
 				
 					<div id="products_box">
 					
 					<?php 
-					$get_pro = "select * from products";
+					$get_pro = "SELECT * FROM products";
 	
 					$run_pro = mysqli_query($con, $get_pro);
 	
 					while($row_pro=mysqli_fetch_array($run_pro)) {
-	
-					$pro_id = $row_pro['product_id'];
-					$pro_cat = $row_pro['product_cat'];
-					$pro_brand = $row_pro['product_brand'];
-					$pro_title = $row_pro['product_title'];
-					$pro_price = $row_pro['product_price'];
-					$pro_image = $row_pro['product_image'];
-	
-					echo "
-					<div id='single_product'>
-			
-					<h3>$pro_title</h3>
-					
-					<a href='details.php?pro_id=$pro_id'> <img src='admin_area/product_images/$pro_image' width='180' height='180' /> </a>
-					
-					<p><b>$ $pro_price</b></p>
-					
-					<a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>
-					
-					<a href='index.php?pro_id=$pro_id'><button style='float:right'>Add to Cart</button></a>
-					
-				</div>
-				";
-				}
-				?>
+						$pro_id = $row_pro['product_id'];
+						$pro_cat = $row_pro['product_cat'];
+						$pro_brand = $row_pro['product_brand'];
+						$pro_title = $row_pro['product_title'];
+						$pro_price = $row_pro['product_price'];
+						$pro_image = $row_pro['product_image'];
+						echo "
+						<div id='single_product'>
+							<h3>$pro_title</h3>
+							<a href='details.php?pro_id=$pro_id'> <img src='admin_area/product_images/$pro_image' width='180' height='180' /> </a>
+							<p><b>$ $pro_price</b></p>
+							<a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>
+							<a href='index.php?pro_id=$pro_id'><button style='float:right'>Add to Cart</button></a>
+						</div>";
+					}
+					?>
 					
 					</div>
 					
@@ -110,16 +88,10 @@ include("functions/functions.php");
 			</div>
 			<!--End content_wrapper container-->
 			
-			
-			<?php include("footer.html") ?>
-		
-	
-	
-	
+			<?php include("templates/footer.html") ?>
 	
 	</div>
 	<!--End main_wrapper container-->
-
 
 </body>
 </html>

@@ -47,27 +47,14 @@ include("functions/functions.php");
 			
 			<!--Begin content_wrapper container-->
 			<div class="content_wrapper">
-				<div id="sidebar" >
-				
-					<div id="sidebar_title">Categories</div>
-					
-					<ul id="cats">
-						<?php getCats(); ?>
-					</ul>
-					
-					<div id="sidebar_title">Brands</div>
-					
-					<ul id="cats">
-						<?php getBrands(); ?>
-					</ul>
-					
-				</div>
 			
+				<?php include("templates/sidebar.php"); ?>
+
 				<div id="content_area">
 				<?php cart(); ?>
 				
 					<div id="shopping_cart">
-						<?php include("status_bar.php") ?>
+						<?php include("templates/status_bar.php") ?>
 					</div>
 					
 					<div id="products_box">
@@ -81,11 +68,7 @@ include("functions/functions.php");
 			</div>
 			<!--End content_wrapper container-->
 			
-			<?php include("footer.html") ?>
-		
-	
-	
-	
+			<?php include("templates/footer.html") ?>
 	
 	</div>
 	<!--End main_wrapper container-->
