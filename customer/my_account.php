@@ -14,28 +14,6 @@ include("../templates/header.php");
 			</div>
 			<!--End head_wrapper container-->
 			
-			<!--Navigation Bar starts-->
-			<div class="menubar">
-			
-				<ul id="menu">
-					<li><a href="../index.php">Home</a></li>
-					<li><a href="../all_products.php">All Products</a></li>
-					<li><a href="../customer/my_account.php">My Account</a></li>
-					<li><a href="../cart.php">My Cart</a></li>
-					<li><a href="#">Support</a></li>
-				
-				</ul>
-				
-				<div id="form">
-					<form method="get" action="results.php" enctype="multipart/form-data">
-						<input type="text"   name="user_query" placeholder="Search a Product" / >
-						<input type="submit" name="search"     value="Search" />
-					</form>
-				
-				</div>
-			
-			</div>
-			<!--Navigation Bar Ends-->
 			
 			<!--Begin content_wrapper container-->
 			<div class="content_wrapper">
