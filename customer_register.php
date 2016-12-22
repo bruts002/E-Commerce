@@ -22,7 +22,7 @@ include("includes/db.php");
 			</div>
 			<!--End head_wrapper container-->
 			
-			<?php include("templates/menubar.html") ?>
+			<?php include("templates/menubar.php") ?>
 			
 			<!--Begin content_wrapper container-->
 			<div class="content_wrapper">

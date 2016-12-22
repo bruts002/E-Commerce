@@ -211,8 +211,17 @@ function getFooter() {
 	echo "<div id='footer'><h2>&copy; 2016 by Michael Brutskiy</h2></div>";
 }
 
-
-
-
+function getPath($level) {
+	$path = "";
+	if ($level > 0) {
+		while ($level > 0) {
+			$path = $path . "../";
+			$level = $level - 1;
+		}
+	} else {
+		$path = "./";
+	}
+	return $path;
+}
 
 ?>

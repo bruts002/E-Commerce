@@ -12,7 +12,7 @@ include("./templates/header.php");
 			</div>
 			<!--End head_wrapper container-->
 			
-			<?php include("templates/menubar.html") ?>
+			<?php include("templates/menubar.php") ?>
 			
 			<div>
 			
