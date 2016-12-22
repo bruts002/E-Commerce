@@ -149,7 +149,7 @@ tr td {
 	width:780px;
 	text-align:center;
 	margin-left:30px;
-	margin-bottom:10px;
+	padding:30px;
 }
 
 #shopping_cart{
@@ -157,16 +157,6 @@ tr td {
 	height:50px;
 	background: #ffc120;
 	color:black;
-}
-#single_product{
-	float:left;
-	margin-left:30px;
-	padding:10px;
-}
-
-#single_product img {
-	border: 2px solid gray;
-	border-radius: 5px;
 }
 
 #cats a {
@@ -298,4 +288,63 @@ table#account a {
     font-family: Lucida Console;
     margin: 4px 2px 15px 2px;
     cursor: pointer;
+}
+
+.panel {
+	padding:10px;
+	width: 180px;
+	height: 180px;
+	float: left;
+}
+
+.panel-default {
+	float:left;
+    -webkit-perspective: 500;
+    perspective: 500;
+    transform-style: preserve-3d;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+    text-align: center;
+    color: black;
+}
+
+.panel-default:hover {
+    transform: rotateY(180deg);
+    cursor: hand;
+    cursor: pointer;
+}
+
+.back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+	border: 2px solid gray;
+	border-radius: 5px;
+    height: 180px;
+	width: 180px;
+}
+
+.front img{
+    backface-visibility:hidden;
+	width: 180px;
+	height: 180px;
+}
+
+.single_product{
+	float:left;
+    margin: 0 10px 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+	padding: 5px;
 }

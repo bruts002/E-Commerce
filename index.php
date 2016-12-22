@@ -49,9 +49,15 @@ include("./templates/header.php");
 					</div>
 					
 					<div id="products_box">
-					
-						<?php getPro(); getCatPro(); getBrandPro(); ?>
-					
+						<?php 
+							if(isset($_GET['brand'])) {
+								getBrandPro();
+							} else if (isset($_GET['cat'])) {
+								getCatPro(); 
+							} else {
+								getPro();
+							}
+						?>
 					</div>
 					
 				</div>

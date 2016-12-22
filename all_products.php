@@ -61,14 +61,8 @@ include("./templates/header.php");
 						$pro_title = $row_pro['product_title'];
 						$pro_price = $row_pro['product_price'];
 						$pro_image = $row_pro['product_image'];
-						echo "
-						<div id='single_product'>
-							<h3>$pro_title</h3>
-							<a href='details.php?pro_id=$pro_id'> <img src='admin_area/product_images/$pro_image' width='180' height='180' /> </a>
-							<p><b>$ $pro_price</b></p>
-							<a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>
-							<a href='index.php?pro_id=$pro_id'><button style='float:right'>Add to Cart</button></a>
-						</div>";
+						$pro_desc = $row_pro['product_desc'];
+						printThumbnail($pro_title, $pro_id, $pro_image, $pro_price, $pro_desc);
 					}
 					?>
 					
