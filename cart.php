@@ -20,14 +20,11 @@ include("./templates/header.php");
 				<?php include("templates/sidebar.php"); ?>
 			
 				<div id="content_area">
-					<?php cart(); ?>
-					
-					<div id="shopping_cart">
-						<?php
-							$status_cart = true;
-							include("templates/status_bar.php")
-						?>
-					</div>
+					<?php
+						cart();
+						$status_cart = true;
+						include("templates/status_bar.php");
+					?>
 					
 					<div id="products_box">
 						<form action="" method="post" enctype="multipart/form-data">

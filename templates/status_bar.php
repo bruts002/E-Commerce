@@ -1,3 +1,4 @@
+<div id="shopping_cart">
 <span style="float:right; font-size:18px; padding:5px; line-height:40px;">
 	<?php
 		if (isset($_SESSION) && isset($_SESSION['customer_email'])) {
@@ -24,3 +25,4 @@
 	?>
 
 </span>
+</div>

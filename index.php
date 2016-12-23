@@ -21,11 +21,10 @@ include("./templates/header.php");
 				<?php include("templates/sidebar.php"); ?>
 
 				<div id="content_area">
-				<?php cart(); ?>
-				
-					<div id="shopping_cart">
-						<?php include("templates/status_bar.php") ?>
-					</div>
+					<?php
+						cart();
+						include("templates/status_bar.php");
+					?>
 					
 					<div id="products_box">
 						<?php 

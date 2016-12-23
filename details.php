@@ -21,13 +21,9 @@ include("./templates/header.php");
 				<?php include("templates/sidebar.php"); ?>
 			
 				<div id="content_area">
-					<?php cart(); ?>
-					
-					<div id="shopping_cart">
-						<?php include("templates/status_bar.php") ?>
-					</div>
-				
-<?php
+					<?php
+						cart();
+						include("templates/status_bar.php")
 	if(isset($_GET['pro_id'])){
 
 	$product_id = $_GET['pro_id'];
