@@ -3,18 +3,9 @@
 session_start();
 include("functions/functions.php");
 include("includes/db.php");
+include("template/header.php");
 
 ?>
-<html>
-	<head>
-		<title>eCommerce</title>
-		<link rel="stylesheet" href="styles/style.css" media="all" />
-	</head>
-	
-<body>
-	
-	<!--Begin main_wrapper container-->
-	<div class="main_wrapper">
 	
 			<!--Begin header_wrapper container-->
 			<div class="header_wrapper"> 
