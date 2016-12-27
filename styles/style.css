@@ -36,33 +36,3 @@ footer, header, hgroup, menu, nav, section {
 	border-top: none;
 	margin-right: 50px;
 }
-
-table#account {
-	width:350px;
-	margin:20px auto;
-	border: 1px solid gray;
-	padding:20px;
-	box-shadow: 0 0px 1px 0;
-	background-color: white;
-	text-align: center;
-	color: gray;
-}
-
-table#account a {
-	text-decoration:none;
-	color:#7E9BD2;
-}
-
-.account {
-	padding: 10px 20px;
-	margin: 8px 0;
-	border: 1px solid grey;
-	border-radius: 3px;
-	width: 100%;
-	font-family: Lucida Console;
-}
-
-.account:focus {
-	border: 1px solid #007dc6;
-	border-radius: 0px;
-}

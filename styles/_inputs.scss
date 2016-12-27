@@ -1,0 +1,48 @@
+
+/** start _inputs.scss partial **/
+.account_button {
+	background-color: #007dc6;
+    border: none;
+    border-radius: 3px;
+    color: #ffc120;
+    padding: 12px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-family: Lucida Console;
+    margin: 4px 2px 15px 2px;
+    cursor: pointer;
+}
+
+.account {
+	padding: 10px 20px;
+	margin: 8px 0;
+	border: 1px solid grey;
+	border-radius: 3px;
+	width: 100%;
+	font-family: Lucida Console;
+
+    &:focus {
+        border: 1px solid #007dc6;
+        border-radius: 0px;
+    }
+}
+
+table#account {
+	width:350px;
+	margin:20px auto;
+	border: 1px solid gray;
+	padding:20px;
+	box-shadow: 0 0px 1px 0;
+	background-color: white;
+	text-align: center;
+	color: gray;
+
+    a {
+        text-decoration:none;
+        color:#7E9BD2;
+    }
+}
+
+/** end _inputs.scss partial **/
