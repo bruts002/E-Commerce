@@ -20,7 +20,7 @@ include("includes/db.php");
 				<td align="center"><input class="account_button" type="submit" name="login" value="Login"/></td>
 			</tr>
 			<tr>
-				<td>Not a member?<a href="customer_register.php"><b> Sign up</b></a></td>
+				<td>Not a member?<a href="../customer_register.php"><b> Sign up</b></a></td>
 			</tr>
 		</table>
 	</form>
