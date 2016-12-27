@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var sass = require('gulp-ruby-sass');
 var browserSync = require('browser-sync').create();
 
 gulp.task('serve', function() {
@@ -12,5 +13,13 @@ gulp.task('serve', function() {
 	gulp.watch('./**/*.php').on('change', browserSync.reload);
 	gulp.watch('./js/*.js').on('change', browserSync.reload);
 });
+
+gulp.task('sass', function() {
+	gulp.watch('./styles/**/*.scss').on('change', function (event) {
+		sass('./styles/main.scss', {sourcemap: true})
+			.on('error', sass.logError)
+			.pipe(gulp.dest('./styles/'))
+	});
+})
 
 gulp.task('default', ['serve']);
