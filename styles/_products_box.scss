@@ -18,17 +18,9 @@
             width: 180px;
             height: 180px;
             float: left;
-            -webkit-perspective: 500;
-            perspective: 500;
+            @include perspective('500');
             transform-style: preserve-3d;
-            -webkit-transition: all 0.6s ease;
-            -moz-transition: all 0.6s ease;
-            -o-transition: all 0.6s ease;
-            transition: all 0.6s ease;
-            -webkit-transition-delay: 200ms;
-            -moz-transition-delay: 200ms;
-            -o-transition-delay: 200ms;
-            transition-delay: 200ms;
+            @include transition-delay('200ms');
             text-align: center;
             color: black;
 

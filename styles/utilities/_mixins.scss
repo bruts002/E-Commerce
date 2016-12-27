@@ -6,4 +6,24 @@
     -ms-border-radius: $radius;
     border-radius: $radius;
 }
+
+@mixin transition($str) {
+    -webkit-transition: #{$str};
+    -moz-transition: #{$str};
+    -ms-transition: #{$str};
+    -o-transition: #{$str};
+    transition: #{$str};      
+}
+
+@mixin transition-delay($str) {
+    -webkit-transition-delay: #{$str};
+    -moz-transition-delay: #{$str};
+    -o-transition-delay: #{$str};
+    transition-delay: #{$str};
+}
+
+@mixin perspective($str) {
+    -webkit-perspective: #{$str};
+    perspective: #{$str};
+}
 /** end _mixins.scss partial **/
