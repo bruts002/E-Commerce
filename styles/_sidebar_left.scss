@@ -1,0 +1,53 @@
+
+/** start _sidebar_left.scss partial **/
+#sidebar {
+	width:194px;
+	color:white;
+	float:left;
+	border: 3px solid gray;
+	border-radius: 0 0 5px 5px;
+	box-shadow: 1px 1px 25px #888888;
+	border-top: none;
+	margin-bottom: 60px;
+	position: relative;
+    
+    .sidebar_title {
+        color:#ffc120;
+        font-size:22px;
+        font-family:arial;
+        padding:12px;
+        text-align:center;
+        background: #007dc6;
+
+        &:hover {
+            color:white;
+            cursor: pointer;
+        }
+    }
+
+    .cats {
+	    text-align:center;
+        
+        li {
+            list-style:none;
+            margin:5px;
+        }
+        
+        a {
+            color: #007dc6;
+            padding:0px;
+            margin:10px;
+            text-align:center;
+            font-size:18px;
+            text-decoration:none;
+            font-family:comic sans ms;
+            
+            &:hover {
+                color:#3da1e0;
+            }
+        }
+
+    }
+
+}
+/** end _sidebar_left.scss partial **/

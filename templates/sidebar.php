@@ -1,10 +1,10 @@
 <div id="sidebar" >
-	<div id="sidebar_title">Categories</div>
-	<ul id="cats">
+	<div class="sidebar_title">Categories</div>
+	<ul class="cats">
 		<?php getCats(); ?>
 	</ul>
-	<div id="sidebar_title">Brands</div>
-	<ul id="cats">
+	<div class="sidebar_title">Brands</div>
+	<ul class="cats">
 		<?php getBrands(); ?>
 	</ul>
 </div>
