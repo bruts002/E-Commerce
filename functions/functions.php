@@ -11,11 +11,13 @@ $SQL_SEL_BRANDS = "SELECT * FROM brands";
 $SQL_SEL_CATS = "SELECT * FROM categories";
 
 $SQL_CART_IP = "SELECT * FROM cart WHERE ip_add='%s'";
+$SQL_CART_IP_ID = "SELECT * FROM cart WHERE ip_add='%s' AND p_id='%s'";
 
 $SQL_SEL_PRODUCTS_ID = "SELECT * FROM products WHERE product_id='%s'";
 $SQL_SEL_PRODUCTS_CAT = "SELECT * FROM products WHERE product_cat='%s'";
 $SQL_SEL_PRODUCTS_BRAND = "SELECT * FROM products WHERE product_brand='%s'";
 
+$SQL_INSERT_CART = "INSERT INTO cart (p_id, ip_add, qty) VALUES ('%s', '%s', %d)";
 
 //error message if no connection
 if (mysqli_connect_errno()) {
@@ -44,6 +46,7 @@ function cart() {
 		$ip = getIP();
 		$pro_id = $_GET['add_cart'];
 		
+		$check_pro = sprintf($GLOBALS['SQL_CART_IP_ID'], $ip, $pro_id);
 		$run_check = mysqli_query($con, $check_pro);
 		
 		if(mysqli_num_rows($run_check)>0) {
