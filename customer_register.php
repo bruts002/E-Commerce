@@ -3,7 +3,7 @@
 session_start();
 include("functions/functions.php");
 include("includes/db.php");
-include("template/header.php");
+include("templates/header.php");
 
 ?>
 	
@@ -71,15 +71,9 @@ include("template/header.php");
 			</div>
 			<!--End content_wrapper container-->
 			
-			<?php getFooter(); ?>
-	</div>
-	<!--End main_wrapper container-->
-
-
-</body>
-</html>
 
 <?php
+	include('templates/footer.html');
 	if (isset($_POST['register'])) {
 		$ip = getIp();
 
