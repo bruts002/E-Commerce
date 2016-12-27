@@ -14,18 +14,20 @@ gulp.task('serve', function() {
 	gulp.watch('./js/*.js').on('change', browserSync.reload);
 });
 
+function buildSass() {
+	sass('./styles/main.scss', {sourcemap: true})
+		.on('error', sass.logError)
+		.pipe(gulp.dest('./styles/'))
+};
+
 gulp.task('sass', function() {
 	gulp.watch('./styles/**/*.scss').on('change', function (event) {
-		sass('./styles/main.scss', {sourcemap: true})
-			.on('error', sass.logError)
-			.pipe(gulp.dest('./styles/'))
+		buildSass();
 	});
 })
 
 gulp.task('build-sass', function() {
-	sass('./styles/main.scss', {sourcemap: true})
-		.on('error', sass.logError)
-		.pipe(gulp.dest('./styles/'));
+	buildSass();
 });
 
 gulp.task('default', ['serve']);
