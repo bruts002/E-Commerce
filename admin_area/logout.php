@@ -1,9 +1,5 @@
 <?php
-
 session_start();
 session_destroy();
-
-
-echo "<script>window.open('login.php?logged_out=true', '_self');</script>";
-
 ?>
+<script>window.open('login.php?logged_out=true', '_self');</script>

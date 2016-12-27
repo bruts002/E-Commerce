@@ -38,25 +38,25 @@ if (!isset($_SESSION['user_email'])) {
 				
 				<?php 
 				if(isset($_GET['insert_product'])) {
-					include("insert_product.php");
+					include("./templates/insert_product.php");
 				} else if (isset($_GET['view_products'])) {
-					include("view_products.php");
+					include("./templates/view_products.php");
 				} else if (isset($_GET['edit_pro'])) {
-					include("edit_pro.php");
+					include("./templates/edit_pro.php");
 				} else if (isset($_GET['insert_cat'])) {
-					include("insert_cat.php");
+					include("./templates/insert_cat.php");
 				} else if (isset($_GET['view_cats'])) {
-					include("view_cats.php");
+					include("./templates/view_cats.php");
 				} else if (isset($_GET['edit_cat'])) {
-					include("edit_cat.php");
+					include("./templates/edit_cat.php");
 				} else if (isset($_GET['insert_brand'])) {
-					include("insert_brand.php");
+					include("./templates/insert_brand.php");
 				} else if (isset($_GET['view_brands'])) {
-					include("view_brands.php");
+					include("./templates/view_brands.php");
 				} else if (isset($_GET['edit_brand'])) {
-					include("edit_brand.php");
+					include("./templates/edit_brand.php");
 				} else if (isset($_GET['view_customers'])) {
-					include("view_customers.php");
+					include("./templates/view_customers.php");
 				} else {
 					echo "<h2 style='text-align:center;'>Welcome to Admin Area!</h2>";
 				}
