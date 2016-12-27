@@ -27,55 +27,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-#sidebar_right {
-	width:194px;
-	color:white;
-	float:right;
-	border: 3px solid gray;
-	border-radius: 0 0 5px 5px;
-	box-shadow: 1px 1px 25px #888888;
-	border-top: none;
-	margin-bottom: 60px;
-	position: relative;
-}
-
-#cats_right {
-	text-align:left;
-}
-
-#sidebar_right_title {
-	color:#ffc120;
-	font-size:22px;
-	font-family:arial;
-	padding:12px;
-	text-align:left;
-	background: #007dc6;
-}
-
-#sidebar_right_title:hover {
-	color:white;
-	cursor: pointer;
-}
-
-#cats_right li {
-	list-style:none;
-	margin:5px;
-}
-
-#cats_right a:hover {
-	color:#3da1e0;
-}
-
-#cats_right a {
-	color: #007dc6;
-	padding:0px;
-	margin:10px;
-	text-align:left;
-	font-size:18px;
-	text-decoration:none;
-	font-family:comic sans ms
-}
-
 .cart_table {
 	float:right;
 	width:700;
