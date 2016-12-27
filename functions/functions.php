@@ -6,6 +6,17 @@ $sql_pass = "";
 $sql_dbname = "ecommerce";
 $con = mysqli_connect($sql_server, $sql_user, $sql_pass, $sql_dbname);
 
+$SQL_SQL_RANDOM = "SELECT * FROM products ORDER BY RAND() LIMIT %d,%d";
+$SQL_SEL_BRANDS = "SELECT * FROM brands";
+$SQL_SEL_CATS = "SELECT * FROM categories";
+
+$SQL_CART_IP = "SELECT * FROM cart WHERE ip_add='%s'";
+
+$SQL_SEL_PRODUCTS_ID = "SELECT * FROM products WHERE product_id='%s'";
+$SQL_SEL_PRODUCTS_CAT = "SELECT * FROM products WHERE product_cat='%s'";
+$SQL_SEL_PRODUCTS_BRAND = "SELECT * FROM products WHERE product_brand='%s'";
+
+
 //error message if no connection
 if (mysqli_connect_errno()) {
 	echo "The connection was not established: " . mysqli_connect_error();
@@ -33,14 +44,13 @@ function cart() {
 		$ip = getIP();
 		$pro_id = $_GET['add_cart'];
 		
-		$check_pro = "SELECT * FROM cart WHERE ip_add='$ip' AND p_id='$pro_id'";
 		$run_check = mysqli_query($con, $check_pro);
 		
 		if(mysqli_num_rows($run_check)>0) {
 			echo "";
 		}
 		else {
-			$insert_pro = "INSERT INTO cart (p_id,ip_add,qty) VALUES ('$pro_id','$ip',1)";
+			$insert_pro = sprintf($GLOBALS['SQL_INSERT_CART'], $pro_id, $ip, 1);
 			$run_pro = mysqli_query($con, $insert_pro);
 			echo "<script>window.open('index.php','_self')</script>";
 		}
@@ -53,7 +63,7 @@ function total_items(){
 	
 	global $con;
 	$ip = getIp();
-	$get_items = "SELECT * FROM cart WHERE ip_add='$ip'";
+	$get_items = sprintf($GLOBALS['SQL_CART_IP'], $ip);
 	$run_items = mysqli_query($con, $get_items);
 	$count_items = mysqli_num_rows($run_items);
 	
@@ -68,12 +78,12 @@ function total_price() {
 		$total = 0;
 		$ip = getIp();
 		
-		$sel_price = "SELECT * FROM cart WHERE ip_add='$ip'";
+		$sel_price = sprintf($GLOBALS['SQL_CART_IP'], $ip);
 		$run_price = mysqli_query($con, $sel_price);
 		while($p_price=mysqli_fetch_array($run_price)) {
 			
 			$pro_id = $p_price['p_id'];
-			$pro_price = "SELECT * FROM products WHERE product_id='$pro_id'";
+			$pro_price = sprintf($GLOBALS['SQL_SEL_PRODUCTS_ID'], $pro_id);
 			$run_pro_price = mysqli_query($con, $pro_price);
 			while ($pp_price = mysqli_fetch_array($run_pro_price)) {
 				$product_price = array($pp_price['product_price']);
@@ -90,7 +100,7 @@ function getCats(){
 
 	global $con;
 
-	$get_cats = "SELECT * FROM categories";
+	$get_cats = $GLOBALS['SQL_SEL_CATS'];
 	$run_cats = mysqli_query($con, $get_cats);
 	while($row_cats=mysqli_fetch_array($run_cats)) {
 		$cat_id = $row_cats['cat_id'];
@@ -104,7 +114,7 @@ function getBrands(){
 
 	global $con;
 
-	$get_brands = "SELECT * FROM brands";
+	$get_brands = $GLOBALS['SQL_SEL_BRANDS'];
 	$run_brands = mysqli_query($con, $get_brands);
 	while($row_brands=mysqli_fetch_array($run_brands)) {
 		$brand_id = $row_brands['brand_id'];
@@ -118,7 +128,7 @@ function getBrands(){
 function getPro(){
 	global $con;
 
-	$get_pro = "SELECT * FROM products ORDER BY RAND() LIMIT 0,6";
+	$get_pro = sprintf($GLOBALS['SQL_SQL_RANDOM'], 0, 6);
 	$run_pro = mysqli_query($con, $get_pro);
 	while($row_pro=mysqli_fetch_array($run_pro)) {
 		$pro_id = $row_pro['product_id'];
@@ -159,7 +169,7 @@ function getCatPro(){
 	global $con;
 
 	$cat_id = $_GET['cat'];
-	$get_cat_pro = "SELECT * FROM products WHERE product_cat='$cat_id'";
+	$get_cat_pro = sprintf($GLOBALS['SQL_SEL_PRODUCTS_CAT'], $cat_id);
 	$run_cat_pro = mysqli_query($con, $get_cat_pro);
 	$count_cats = mysqli_num_rows($run_cat_pro);
 	if($count_cats==0) {
@@ -186,7 +196,7 @@ function getBrandPro(){
 	global $con;
 
 	$brand_id = $_GET['brand'];
-	$get_brand_pro = "SELECT * FROM products WHERE product_brand='$brand_id'";
+	$get_brand_pro = sprintf($GLOBALS['SQL_SEL_PRODUCTS_BRAND'], $brand_id );
 	$run_brand_pro = mysqli_query($con, $get_brand_pro);
 	$count_brands = mysqli_num_rows($run_brand_pro);
 	if($count_brands==0) {
