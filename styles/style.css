@@ -27,18 +27,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-
-
-body {
-	background:white;
-}
-
-tr td {
-	vertical-align: middle;
-}
-
-
-
 .main_wrapper{
 	width:1000px;
 	height:auto;
@@ -150,13 +138,6 @@ tr td {
 	text-align:center;
 	margin-left:30px;
 	padding:30px;
-}
-
-#shopping_cart{
-	width:800px;
-	height:50px;
-	background: #ffc120;
-	color:black;
 }
 
 #cats a {

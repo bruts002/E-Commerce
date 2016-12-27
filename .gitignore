@@ -3,5 +3,5 @@ node_modules/*
 */dup*/
 */dup*
 .vscode/*
-styles/.sass-cache/*
+**/.sass-cache/*
 *.map

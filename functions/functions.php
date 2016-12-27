@@ -206,11 +206,6 @@ function getBrandPro(){
 	}
 }
 
-//print footer
-function getFooter() {
-	echo "<div id='footer'><h2>&copy; 2016 by Michael Brutskiy</h2></div>";
-}
-
 function getPath($level) {
 	$path = "";
 	if ($level > 0) {

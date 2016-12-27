@@ -1,0 +1,23 @@
+
+/** start _status_bar.scss partial **/
+#shopping_cart {
+	width:800px;
+	height:50px;
+	background: #ffc120;
+	color:black;
+    
+    span {
+        float:right;
+        font-size:18px;
+        padding:5px;
+        line-height:40px;
+
+        b {
+            color:white;
+        }
+        a:first-of-type {
+            color: white;
+        }
+    }
+}
+/** end _status_bar.scss partial **/
