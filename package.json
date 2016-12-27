@@ -1,0 +1,26 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.1.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruts002/E-Commerce.git"
+  },
+  "author": "Michael Brutskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bruts002/E-Commerce/issues"
+  },
+  "homepage": "https://github.com/bruts002/E-Commerce#readme"
+}

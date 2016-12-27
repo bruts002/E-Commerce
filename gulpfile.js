@@ -22,4 +22,10 @@ gulp.task('sass', function() {
 	});
 })
 
+gulp.task('build-sass', function() {
+	sass('./styles/main.scss', {sourcemap: true})
+		.on('error', sass.logError)
+		.pipe(gulp.dest('./styles/'));
+});
+
 gulp.task('default', ['serve']);
