@@ -1,0 +1,49 @@
+
+/** start _admin_area.scss partial **/
+.header {
+	width: 1000px;
+	height: 120px;
+	background: pink;
+	border-bottom: 5px groove orange;
+}
+
+.left {
+	width: 795px;
+	height: 600px;
+	background: yellow;
+	float: left;
+    h2 {
+        text-align: left;
+    }
+}
+
+.right {
+	width: 200px;
+	height: 800px;
+	float: right;
+	border-left: 5px groove orange;
+	background: #187eae;
+    
+    a {
+        text-decoration: none;
+        color: white;
+        text-align: left;
+        font-size: 18px;
+        font-family: Platino;
+        padding: 6px;
+        margin: 6px;
+        display: block;
+        
+        &:hover {
+            text-decoration: underline;
+            font-weight: bolder;
+            color: orange;
+        }
+    }
+    
+    h2 {
+        text-align: left;
+    }
+}
+
+/** end _admin_area.scss partial **/

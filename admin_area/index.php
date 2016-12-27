@@ -12,14 +12,14 @@ if (!isset($_SESSION['user_email'])) {
 <html>
 	<head>
 		<title>Welcome to Admin Panel</title>
-		<link media="all" rel="stylesheet" href="styles/style.css">
+		<link media="all" rel="stylesheet" href="../styles/main.css">
 	</head>
 
 	<body>
 		<div class="main_wrapper">
-			<div id="header"></div>
+			<div class="header"></div>
 
-			<div id="right">
+			<div class="right">
 				<h2>Manage Content</h2>
 				<a href="index.php?insert_product">Insert New Product</a>
 				<a href="index.php?view_products">View All Products</a>
@@ -34,7 +34,7 @@ if (!isset($_SESSION['user_email'])) {
 			</div>
 
 
-			<div id="left">
+			<div class="left">
 				
 				<?php 
 				if(isset($_GET['insert_product'])) {
