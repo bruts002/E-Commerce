@@ -1,5 +1,6 @@
 @import 'utilities/normalize';
 @import 'utilities/variables';
+@import 'utilities/mixins';
 
 @import '_status_bar';
 @import '_sidebar_left';
@@ -51,7 +52,7 @@ tr td {
 	float:right;
 	width:700;
 	border:3px solid gray;
-	border-radius:0 0 5px 5px;
+	@include border-radius(0 0 5px 5px);
 	box-shadow:1px 1px 25px #888888;
 	border-top: none;
 	margin-right: 50px;

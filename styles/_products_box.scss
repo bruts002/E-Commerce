@@ -10,7 +10,7 @@
         float:left;
         margin: 0 10px 10px 10px;
         border: 1px solid #ddd;
-        border-radius: 4px;
+        @include border-radius(4px);
         padding: 5px;
         
         .panel {
@@ -44,7 +44,7 @@
             .back {
                 backface-visibility: hidden;
                 border: 2px solid gray;
-                border-radius: 5px;
+                @include border-radius(5px);
                 height: 180px;
                 width: 180px;
 
