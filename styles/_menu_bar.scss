@@ -3,7 +3,7 @@
 .menubar {
 	width:994px;
 	height:50px;
-	background:#007dc6;
+	background:$bg-blue;
 	color:yellow;
 	border: 3px solid gray;
     
@@ -21,7 +21,7 @@
         
         a {
             text-decoration:none;
-            color:#ffc120;
+            color:$bg-yellow;
             padding:10px;
             margin:10px;
             font-size:20px;

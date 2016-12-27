@@ -12,12 +12,12 @@
 	position: relative;
     
     .sidebar_title {
-        color:#ffc120;
+        color:$bg-yellow;
         font-size:22px;
         font-family:arial;
         padding:12px;
         text-align:center;
-        background: #007dc6;
+        background: $bg-blue;
 
         &:hover {
             color:white;
@@ -34,7 +34,7 @@
         }
         
         a {
-            color: #007dc6;
+            color: $bg-blue;
             padding:0px;
             margin:10px;
             text-align:center;
@@ -43,7 +43,7 @@
             font-family:comic sans ms;
             
             &:hover {
-                color:#3da1e0;
+                color:$bg-blue-hover;
             }
         }
 
