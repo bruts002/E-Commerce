@@ -2,6 +2,7 @@
 @import '_sidebar_left';
 @import '_footer';
 @import '_products_box';
+@import '_menu_bar';
 
 
 body {
@@ -10,4 +11,31 @@ body {
 
 tr td {
 	vertical-align: middle;
+}
+
+.main_wrapper{
+	width:1000px;
+	height:auto;
+	margin:auto;
+	background:white;
+}
+
+.content_wrapper {
+	width:1000px;
+	margin:auto;
+	background: #ffc120;
+}
+
+.header_wrapper{
+	width:1000px;
+	height:150px;
+	margin:auto;
+	background:black;
+}
+
+#content_area {
+	width:800px;
+	float:right;
+	background: white;
+	margin-bottom: 100px;
 }

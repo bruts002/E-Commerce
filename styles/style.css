@@ -27,48 +27,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-.main_wrapper{
-	width:1000px;
-	height:auto;
-	margin:auto;
-	background:white;
-}
-
-.header_wrapper{
-	width:1000px;
-	height:150px;
-	margin:auto;
-	background:black;
-}
-
-#noselect {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	font-family:arial;
-}
-
-#noselect:hover {
-	cursor:default;
-	color:transparent;
-}
-
-.content_wrapper {
-	width:1000px;
-	margin:auto;
-	background: #ffc120;
-}
-
-#content_area {
-	width:800px;
-	float:right;
-	background: white;
-	margin-bottom: 100px;
-}
-
 #sidebar_right {
 	width:194px;
 	color:white;
@@ -118,41 +76,6 @@ footer, header, hgroup, menu, nav, section {
 	font-family:comic sans ms
 }
 
-.menubar {
-	width:994px;
-	height:50px;
-	background:#007dc6;
-	color:yellow;
-	border: 3px solid gray;
-}
-
-#menu {
-	padding:0;
-	margin:0;
-	margin-left:50px;
-	line-height:50px;
-	float:left;
-}
-
-#menu li {
-	list-style:none;
-	display:inline;
-}
-
-#menu a {
-	text-decoration:none;
-	color:#ffc120;
-	padding:10px;
-	margin:10px;
-	font-size:20px;
-	font-family:Lucida Console;
-}
-
-#menu a:hover {
-	color:white;
-	text-decoration:underline;
-}
-
 .cart_table {
 	float:right;
 	width:700;
@@ -161,12 +84,6 @@ footer, header, hgroup, menu, nav, section {
 	box-shadow:1px 1px 25px #888888;
 	border-top: none;
 	margin-right: 50px;
-}
-
-#form{
-	float:right;
-	padding-right:10px;
-	line-height:50px;
 }
 
 table#account {
