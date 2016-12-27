@@ -11,101 +11,91 @@ if (!isset($_SESSION['user_email'])) {
 include("../includes/db.php");
 
 ?>
-<html>
-	<head>
-		<title>Inserting Product</title>
-		<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-		<script>tinymce.init({selector:'textarea'});</script>
-	</head>
+
+<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+<script>tinymce.init({selector:'textarea'});</script>
 	
-<body bgcolor="skyblue">
+<form action="insert_product.php" method="post" enctype="multipart/form-data">
+	<table align="center" width="795" border="2" bgcolor="#187eae">
 	
-	<form action="insert_product.php" method="post" enctype="multipart/form-data">
-		<table align="center" width="795" border="2" bgcolor="#187eae">
+		<tr align="center">
+			<td colspan="7">
+				<h2 align="center">Insert New Post Here</h2>
+			</td>
+		</tr>
 		
-			<tr align="center">
-				<td colspan="7">
-					<h2 align="center">Insert New Post Here</h2>
-				</td>
-			</tr>
-			
-			<tr>
-				<td align="right"><b>Product Title:</b></td>
-				<td><input type="text" name="product_title" size="60" /></td>
-			</tr>
-			
-			<tr>
-				<td align="right"><b>Product Category:</b></td>
-				<td>
-					<select name="product_cat">
-						<option>Select a Category</option>
-						<?php
-							$get_cats = "select * from categories";
-							$run_cats = mysqli_query($con, $get_cats);
-							while($row_cats=mysqli_fetch_array($run_cats)) {
-								$cat_id = $row_cats['cat_id'];
-								$cat_title = $row_cats['cat_title'];
-								echo "<option value='$cat_id'>$cat_title</option>";
-							}
-						?>
-					</select>
-				</td>
-			</tr>
-			
-			<tr>
-				<td align="right"><b>Product Brand:</b></td>
-				<td>
-					<select name="product_brand">
-						<option>Select a Brand</option>
-						<?php
-							$get_brands = "select * from brands";
-							$run_brands = mysqli_query($con, $get_brands);
-							while($row_brands=mysqli_fetch_array($run_brands)) {
-								$brand_id = $row_brands['brand_id'];
-								$brand_title = $row_brands['brand_title'];
-								echo "<option value='$brand_id'>$brand_title</option>";
-							}
-						?>
-					</select>
-				</td>
-			</tr>
-			
-			<tr>
-				<td align="right"><b>Product Image:</b></td>
-				<td><input type="file" name="product_image"/></td>
-			</tr>
-			
-			<tr>
-				<td align="right"><b>Product Price:</b></td>
-				<td>
-					<input type="text" name="product_price"/>
-				</td>
-			</tr>
-			
-			<tr>
-				<td align="right"><b>Product Description:</b></td>
-				<td>
-					<textarea name="product_desc" cols="1" rows="10" placeholder="Click here to type"></textarea>
-				</td>
-			</tr>
-			
-			<tr>
-				<td align="right"><b>Product Keywords:</b></td>
-				<td><input type="text" name="product_keywords" size="50"/></td>
-			</tr>
-			
-			<tr align="center">
-				<td colspan="2"><input type="submit" name="insert_post" value="Insert Product Now"/></td>
-			</tr>
+		<tr>
+			<td align="right"><b>Product Title:</b></td>
+			<td><input type="text" name="product_title" size="60" /></td>
+		</tr>
 		
-		</table>
+		<tr>
+			<td align="right"><b>Product Category:</b></td>
+			<td>
+				<select name="product_cat">
+					<option>Select a Category</option>
+					<?php
+						$get_cats = "select * from categories";
+						$run_cats = mysqli_query($con, $get_cats);
+						while($row_cats=mysqli_fetch_array($run_cats)) {
+							$cat_id = $row_cats['cat_id'];
+							$cat_title = $row_cats['cat_title'];
+							echo "<option value='$cat_id'>$cat_title</option>";
+						}
+					?>
+				</select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="right"><b>Product Brand:</b></td>
+			<td>
+				<select name="product_brand">
+					<option>Select a Brand</option>
+					<?php
+						$get_brands = "select * from brands";
+						$run_brands = mysqli_query($con, $get_brands);
+						while($row_brands=mysqli_fetch_array($run_brands)) {
+							$brand_id = $row_brands['brand_id'];
+							$brand_title = $row_brands['brand_title'];
+							echo "<option value='$brand_id'>$brand_title</option>";
+						}
+					?>
+				</select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="right"><b>Product Image:</b></td>
+			<td><input type="file" name="product_image"/></td>
+		</tr>
+		
+		<tr>
+			<td align="right"><b>Product Price:</b></td>
+			<td>
+				<input type="text" name="product_price"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="right"><b>Product Description:</b></td>
+			<td>
+				<textarea name="product_desc" cols="1" rows="10" placeholder="Click here to type"></textarea>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="right"><b>Product Keywords:</b></td>
+			<td><input type="text" name="product_keywords" size="50"/></td>
+		</tr>
+		
+		<tr align="center">
+			<td colspan="2"><input type="submit" name="insert_post" value="Insert Product Now"/></td>
+		</tr>
 	
-	</form>
-	
-	
-	
-</body>
-</html>
+	</table>
+
+</form>
 
 <?php
 
@@ -136,16 +126,5 @@ include("../includes/db.php");
 		}
 		}
 
-
-
-
-
-
-
-
 }
-
-
-
-
 ?>
