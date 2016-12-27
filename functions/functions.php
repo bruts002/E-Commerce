@@ -136,21 +136,19 @@ function printThumbnail($title, $id, $image, $price, $desc) {
 	echo "
 		<div class='single_product'>
 			<h3>$title</h3>
-			<div class='panel panel-default'>
-				<div class='box-container'>
-					<div class='front'>
-						<a href='details.php?pro_id=$id'>
-							<img src='admin_area/product_images/$image' />
-						</a>
-					</div>
-					<div class='back'>
-						$desc
-					</div>
+			<div class='panel'>
+				<div class='front'>
+					<a href='details.php?pro_id=$id'>
+						<img src='admin_area/product_images/$image' />
+					</a>
+				</div>
+				<div class='back'>
+					$desc
 				</div>
 			</div>
 			<p><b>Price: $$price</b></p>
-			<a href='details.php?pro_id=$id' style='float:left;'>Details</a>
-			<a href='index.php?add_cart=$id'><button style='float:right'>Add to Cart</button></a>
+			<a href='details.php?pro_id=$id'>Details</a>
+			<a href='index.php?add_cart=$id'><button>Add to Cart</button></a>
 		</div>
 	";
 }
