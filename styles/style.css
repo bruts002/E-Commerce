@@ -66,18 +66,3 @@ table#account a {
 	border: 1px solid #007dc6;
 	border-radius: 0px;
 }
-
-#account_button {
-	background-color: #007dc6;
-    border: none;
-    border-radius: 3px;
-    color: #ffc120;
-    padding: 12px 23px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    font-family: Lucida Console;
-    margin: 4px 2px 15px 2px;
-    cursor: pointer;
-}

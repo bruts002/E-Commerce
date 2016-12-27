@@ -17,7 +17,7 @@ include("includes/db.php");
 				<td align="right"> <a href="checkout.php?forgot_pass" style="color:#808080;text-decoration:none;">Forgot</a></td>
 			</tr>
 			<tr>
-				<td align="center"><input id="account_button" type="submit" name="login" value="Login"/></td>
+				<td align="center"><input class="account_button" type="submit" name="login" value="Login"/></td>
 			</tr>
 			<tr>
 				<td>Not a member?<a href="customer_register.php"><b> Sign up</b></a></td>

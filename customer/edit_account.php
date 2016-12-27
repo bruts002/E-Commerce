@@ -48,7 +48,7 @@
 							<td><input placeholder="Address" value="<?php echo $address?>" class="account" required type="text" name="c_address" /></td>
 						</tr>
 						<tr align="center">
-							<td><input id="account_button" type="submit" name="register" value="Update Account" /></td>
+							<td><input class="account_button" type="submit" name="register" value="Update Account" /></td>
 						</tr>
 
 					</table>

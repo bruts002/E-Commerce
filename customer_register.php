@@ -59,7 +59,7 @@ include("templates/header.php");
 							<td><input placeholder="Address" class="account" required type="text" name="c_address" /></td>
 						</tr>
 						<tr align="center">
-							<td><input id="account_button" type="submit" name="register" value="Create Account" /></td>
+							<td><input class="account_button" type="submit" name="register" value="Create Account" /></td>
 						</tr>
 						<tr>
 							<td>Already a member? <a href="checkout.php"><b>Login</b></a></td>
