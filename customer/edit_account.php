@@ -18,6 +18,7 @@
 ?>
 
 <form action="" method="post" enctype="multipart/form-data">
+	<table class="account">
 
 
 		<tr>
