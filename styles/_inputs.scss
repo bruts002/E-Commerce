@@ -29,7 +29,7 @@
     }
 }
 
-table#account {
+table.account {
 	width:350px;
 	margin:20px auto;
 	border: 1px solid gray;
@@ -38,6 +38,10 @@ table#account {
 	background-color: white;
 	text-align: center;
 	color: gray;
+
+    b {
+        color: black;
+    }
 
     a {
         text-decoration:none;

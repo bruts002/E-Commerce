@@ -1,10 +1,21 @@
 
 <h2 style="text-align:center">Change Password</h2>
 <form action="" method="post">
-	<b>Password </b><input required type="password" name="current_pass"> <br/>
-	<b>New Password </b><input required type="password" name="new_pass"> <br/>
-	<b>New Password Again </b><input required type="password" name="new_pass_again"> <br/>
-	<input type="submit" name="change_pass" value="Change Password">
+	<table class="account">
+		<tr>
+			<td><input required placeholder="Current Password" type="password" class="account" name="current_pass"> </td>
+		</tr>
+		<tr>
+			<td><input required placeholder="New Password" type="password" class="account" name="new_pass"> </td>
+		</tr>
+		<tr>
+			<td><input required placeholder="New Password Again" type="password" class="account" name="new_pass_again"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="change_pass" class="account_button" value="Change Password"></td>
+		</tr>
+	</table>
+	
 </form>
 
 <?php

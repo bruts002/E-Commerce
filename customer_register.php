@@ -19,7 +19,7 @@ include("templates/header.php");
 			<div class="content_wrapper">
 			
 				<form action="customer_register.php" method="post" enctype="multipart/form-data">
-					<table id="account">
+					<table class="account">
 	
 
 						<tr>

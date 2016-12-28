@@ -4,7 +4,7 @@ include("includes/db.php");
 
 <div style="margin:auto auto;">
 	<form method="post" action="">
-		<table id="account">
+		<table class="account">
 			<tr><td>&nbsp;</td></tr>
 			<tr><td>&nbsp;</td></tr>
 			<tr align="center">

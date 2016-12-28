@@ -18,7 +18,6 @@
 ?>
 
 <form action="" method="post" enctype="multipart/form-data">
-	<table width="350" style="margin:20px auto; border: 1px solid gray; padding:20px; box-shadow: 0 0px 1px 0;" bgcolor="white">
 
 
 		<tr>
