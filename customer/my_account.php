@@ -22,32 +22,36 @@ include("../templates/header.php");
 					if (!isset($_SESSION['customer_email'])) {
 						$destination = "my_account.php";
 						include("../customer_login.php");
-						exit();
+					} else {
+						include("../templates/account_sidebar_right.php");
 					}
-					include("../templates/account_sidebar_right.php");
 				?>
 			
 				<div id="content_area">
-					<?php cart(); ?>
-
+					<?php
+						cart();
+						if(isset($_SESSION['customer_email'])) {
+					?>
+ 
 					<div id="products_box">
 						<?php 
-						if(!isset($_GET['my_orders']) && !isset($_GET['edit_account'])
-						&& !isset($_GET['delete_account']) && !isset($_GET['change_pass']) ){
-							echo "<h2 style='padding-top:20px;' >Welcome $c_name </h2><br/>";
-							echo "<b>You can see your orders' progress by clicking this <a href='my_account.php?my_orders'>link</a></b>" ;
-						}
-						if (isset($_GET['edit_account'])) {
-							include("edit_account.php");
-						}
-						if (isset($_GET['change_pass'])) {
-							include("change_pass.php");
-						}
-						if (isset($_GET['delete_account'])) {
-							include("delete_account.php");
-						}
+							if(!isset($_GET['my_orders']) && !isset($_GET['edit_account'])
+							&& !isset($_GET['delete_account']) && !isset($_GET['change_pass']) ){
+								echo "<h2 style='padding-top:20px;' >Welcome $c_name </h2><br/>";
+								echo "<b>You can see your orders' progress by clicking this <a href='my_account.php?my_orders'>link</a></b>" ;
+							}
+							if (isset($_GET['edit_account'])) {
+								include("edit_account.php");
+							}
+							if (isset($_GET['change_pass'])) {
+								include("change_pass.php");
+							}
+							if (isset($_GET['delete_account'])) {
+								include("delete_account.php");
+							}
 						?>
 					</div>
+					<?php } ?>
 
 				</div>
 				
